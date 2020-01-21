@@ -1,0 +1,23 @@
+insert into blogful_articles (title, date_published, content)
+values
+('blog power', now() - '21 days'::INTERVAL, 'muita conversa '),
+('blog of the week', now() - '15 days'::INTERVAL, 'best blog of the week'),
+('blog of the year', now() - '20 days'::INTERVAL, 'alot to chat'),
+('blog of gamers', now() - '11 days'::INTERVAL, 'gaming'),
+('blog  of cent', now() - '100 days'::INTERVAL, 'old school'),
+('blog', now() - '211 days'::INTERVAL, 'muito andar '),
+('david blog', now() - '21 days'::INTERVAL, 'developers'),
+('blog of developers', now() - '10 days'::INTERVAL, 'developers '),
+('blog', now() - '15 days'::INTERVAL, 'muito bom '),
+('best blog', now() - '1 days'::INTERVAL, 'bom '),
+('acc blog', now() - '5 days'::INTERVAL, 'eish'),
+('blog youtube', now() - '30 days'::INTERVAL, 'youtubers'),
+('david dobrik blog', now() - '15 days'::INTERVAL, 'muito bom '),
+('blog mr beast', now() - '1 days'::INTERVAL, ' bom '),
+('blog ninja', now() - '15 days'::INTERVAL, 'muito bom '),
+('pranks blog', now() - '15 days'::INTERVAL, 'very good '),
+('prank war blog', now() - '25 days'::INTERVAL, 'good'),
+('beast blog', now() - '3 days'::INTERVAL, 'muito bom '),
+('youngboys', now() - '15 days'::INTERVAL, 'very good '),
+('fishing blog', now() - '5 days'::INTERVAL, 'good'),
+('rabbit blog', now() - '1 days'::INTERVAL, 'muito bom ')
