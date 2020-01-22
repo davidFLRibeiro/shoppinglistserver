@@ -27,19 +27,26 @@ describe(`Articles service object`, function() {
     });
   });
 
-  before(() => {
+  after(() => db.destroy());
+
+  beforeEach(() => {
+    return db.raw('TRUNCATE TABLE blogful_articles RESTART IDENTITY CASCADE');
+  });
+
+  beforeEach(() => {
     return db.into('blogful_articles').insert(testArticles);
   });
 
-  after(() => db.destroy());
+  afterEach(() => {
+    return db.raw('TRUNCATE TABLE blogful_articles RESTART IDENTITY CASCADE');
+  });
 
   describe(`getAllArticles()`, () => {
     it(`resolves all articles from 'blogful_articles' table`, () => {
       // test that ArticlesService.getAllArticles gets data from table
-      return ArticlesService.getAllArticles().then(actual => {
+      return ArticlesService.getAllArticles(db).then(actual => {
         expect(actual).to.eql(testArticles);
       });
     });
   });
 });
-module.exports = ArticlesService;
